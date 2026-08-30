@@ -358,7 +358,7 @@ table { border-collapse: collapse; width: 100%; }
 }
 .news-list a:hover { padding-left: 10px; }
 .news-list .tit {
-  flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   font-size: 16px; color: var(--ink-2);
 }
 .news-list a:hover .tit { color: var(--blue-d); font-weight: 600; }
@@ -547,6 +547,7 @@ table { border-collapse: collapse; width: 100%; }
 .view-nav { margin-top: 30px; border-top: 1px solid var(--line); }
 .view-nav-row { display: flex; align-items: center; gap: 20px; padding: 15px 4px; border-bottom: 1px solid var(--line-2); font-size: 15px; }
 .view-nav-row .lb { flex: none; width: 70px; color: var(--ink-3); font-size: 14px; }
+.view-nav-row a, .view-nav-row em { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .view-nav-row em { font-style: normal; color: var(--ink-3); }
 .view-btns { margin-top: 36px; text-align: center; }
 
@@ -628,7 +629,7 @@ table { border-collapse: collapse; width: 100%; }
     box-shadow: 0 -6px 20px rgba(22, 40, 60, .07);
   }
   .mobile-bar a {
-    display: grid; place-items: center; gap: 2px; padding: 9px 4px;
+    display: grid; place-items: center; gap: 2px; padding: 9px 4px; min-width: 0;
     font-size: 11px; color: var(--ink-2); border-right: 1px solid var(--line-2);
   }
   .mobile-bar a span { font-size: 17px; }
