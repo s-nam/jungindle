@@ -2,7 +2,7 @@
 
 Jekyll + GitHub Pages 로 만든 정적 홈페이지입니다. 호스팅·SSL 모두 무료입니다.
 
-- 운영 주소: <https://s-nam.github.io/jungindle/>
+- 운영 주소: <https://jidcoop.com>  (구 주소 https://s-nam.github.io/jungindle/ 는 자동 이동)
 - 기관: 정인들 사회적협동조합 재가복지센터 (세종특별자치시 재가노인복지시설)
 
 ---
@@ -86,12 +86,23 @@ macOS 기본 Ruby(2.6)는 버전이 낮아 동작하지 않습니다.
 `main` 브랜치에 push하면 GitHub Actions가 자동으로 빌드·배포합니다.
 저장소 **Settings → Pages → Source** 는 **GitHub Actions** 로 설정되어 있습니다.
 
-### 개인 도메인 연결 (선택)
+### 도메인 (jidcoop.com) — 설정 완료
 
-1. 저장소 루트에 `CNAME` 파일을 만들고 도메인만 한 줄 적습니다.
-2. 도메인 등록기관 DNS에 A 레코드 4개를 추가합니다.
-   `185.199.108.153` / `185.199.109.153` / `185.199.110.153` / `185.199.111.153`
-3. Settings → Pages 에서 **Enforce HTTPS** 를 켭니다.
+가비아에서 등록한 `jidcoop.com` 이 연결되어 있습니다. 설정 내용은 다음과 같습니다.
+
+| 위치 | 설정 |
+| --- | --- |
+| 가비아 DNS (A, 호스트 `@`) | `185.199.108.153` `185.199.109.153` `185.199.110.153` `185.199.111.153` |
+| 가비아 DNS (CNAME, 호스트 `www`) | `s-nam.github.io.` |
+| GitHub Settings → Pages → Custom domain | `jidcoop.com` |
+| 저장소 루트 [`CNAME`](CNAME) | `jidcoop.com` (설정이 초기화되지 않도록 하는 안전장치) |
+| `_config.yml` 의 `url` | `https://jidcoop.com` |
+
+> **`baseurl` 은 항상 비워두세요.** 배포 워크플로가 `--baseurl "${{ steps.pages.outputs.base_path }}"` 로
+> GitHub Pages 설정값을 자동 주입합니다. 커스텀 도메인이 켜져 있으면 `""`, 꺼지면 `"/jungindle"` 이 들어갑니다.
+> 여기에 값을 직접 적으면 두 설정이 충돌해 CSS·이미지 경로가 깨집니다.
+
+도메인을 바꾸실 때는 위 표의 다섯 곳을 함께 고치시면 됩니다.
 
 ## 5. 아직 채워야 할 내용
 
