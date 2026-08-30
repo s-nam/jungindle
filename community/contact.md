@@ -59,8 +59,8 @@ permalink: /community/contact/
 - 보건복지상담센터 **129**
 - 중앙치매센터 치매상담콜센터 **1899-9988**
 
-<blockquote>
+<!-- <blockquote>
 <p>이 홈페이지는 서버 없이 운영되는 정적 사이트라 온라인 신청 폼이 없습니다.
 웹에서 바로 접수받는 양식이 필요하시면 <strong>네이버 폼</strong>이나 <strong>구글 폼</strong>을
 이 페이지에 붙여 무료로 운영할 수 있습니다.</p>
-</blockquote>
+</blockquote> -->
