@@ -212,9 +212,10 @@ table { border-collapse: collapse; width: 100%; }
 .hero-arrow.prev { left: 24px; }
 .hero-arrow.next { right: 24px; }
 
+/* 퀵링크 카드가 히어로 하단을 -70px 덮으므로 그보다 위에 배치 */
 .hero-dots {
-  position: absolute; left: 50%; bottom: 34px; transform: translateX(-50%);
-  z-index: 3; display: flex; gap: 10px;
+  position: absolute; left: 50%; bottom: 108px; transform: translateX(-50%);
+  z-index: 6; display: flex; gap: 10px;
 }
 .hero-dots button {
   width: 10px; height: 10px; border-radius: 50%; background: rgba(255, 255, 255, .45); transition: .2s;
@@ -577,6 +578,7 @@ table { border-collapse: collapse; width: 100%; }
 @media (max-width: 720px) {
   .hero { height: clamp(400px, 66vh, 560px); }
   .hero-arrow { display: none; }
+  .hero-dots { bottom: 74px; }
   .quick-list a { padding: 22px 18px; }
   .quick-list .ico { width: 46px; height: 46px; margin-bottom: 12px; }
   .quick-list strong { font-size: 17px; }
