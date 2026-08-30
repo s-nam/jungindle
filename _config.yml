@@ -35,8 +35,15 @@ org:
   hours_short: 월~금 09:30~18:00
   closed: 토요일 · 일요일 · 공휴일 휴무
   naver_place: "https://naver.me/FLEnikGd"
-  # 지도 임베드 주소 (네이버 지도 → 공유 → 지도 퍼가기 에서 발급)
-  map_embed: "https://naver.me/FLEnikGd"
+  lat: "36.485444"
+  lng: "127.30111"
+  # 지도 삽입(iframe) 주소.
+  #  ※ 네이버 지도는 여기에 넣을 수 없습니다.
+  #     map.naver.com / naver.me 는 X-Frame-Options: DENY 로 외부 삽입을 차단합니다.
+  #     (naver.me 링크는 '새 창으로 열기'용이며, 위 naver_place 에 이미 쓰고 있습니다)
+  #     네이버 지도를 정말 넣으려면 네이버클라우드플랫폼 Maps 의 Client ID 가 필요합니다.
+  #  ※ 비워두면 오시는 길 페이지에 주소와 '네이버 지도에서 보기' 버튼이 표시됩니다.
+  map_embed: ""
   copyright: Copyright 2026 정인들 사회적협동조합 재가복지센터 All Rights Reserved.
 
 # ── 관련 사이트 (푸터 셀렉트박스) ───────────────────────────
