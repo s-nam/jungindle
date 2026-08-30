@@ -36,7 +36,7 @@ org:
   closed: 토요일 · 일요일 · 공휴일 휴무
   naver_place: "https://naver.me/FLEnikGd"
   # 지도 임베드 주소 (네이버 지도 → 공유 → 지도 퍼가기 에서 발급)
-  map_embed: ""
+  map_embed: "https://naver.me/FLEnikGd"
   copyright: Copyright 2026 정인들 사회적협동조합 재가복지센터 All Rights Reserved.
 
 # ── 관련 사이트 (푸터 셀렉트박스) ───────────────────────────
