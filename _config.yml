@@ -31,8 +31,8 @@ org:
   mobile: "010-3454-8984"
   fax: "044-865-8005"
   email: jidcoop@naver.com
-  hours: 월~금 09:30 ~ 18:00 (토·일 휴무)
-  hours_short: 월~금 09:30~18:00
+  hours: 월~금 09:00 ~ 18:00 (토·일 휴무)
+  hours_short: 월~금 09:00~18:00
   closed: 토요일 · 일요일 · 공휴일 휴무
   naver_place: "https://naver.me/FLEnikGd"
   lat: "36.485444"
