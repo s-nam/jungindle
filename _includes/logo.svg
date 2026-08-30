@@ -7,6 +7,6 @@
   <text x="110" y="78" text-anchor="middle"
         font-family="'Pretendard Variable', Pretendard, 'Apple SD Gothic Neo', sans-serif"
         font-size="54" font-weight="800" letter-spacing="-1.5">
-    <tspan fill="var(--blue)">정</tspan><tspan fill="var(--gold)">人</tspan><tspan fill="var(--ink)">들</tspan>
+    <tspan fill="var(--blue)">정</tspan><tspan fill="var(--gold)">人</tspan><tspan fill="var(--blue)">들</tspan>
   </text>
 </svg>
