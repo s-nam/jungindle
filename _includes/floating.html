@@ -1,7 +1,8 @@
 <div class="quickside">
   <div class="quickside-box">
-    <p class="label">상담 / 문의전화</p>
-    <p class="tel">{{ site.org.tel }}</p>
+    <p class="label">상담 · 문의전화</p>
+    <p class="tel"><a href="tel:{{ site.org.tel }}">{{ site.org.tel }}</a></p>
+    <p class="tel sub"><a href="tel:{{ site.org.mobile }}">{{ site.org.mobile }}</a></p>
     <p class="hours">{{ site.org.hours }}</p>
   </div>
   <button type="button" class="btn-top" data-scroll-top aria-label="맨 위로">
@@ -11,7 +12,7 @@
 
 <nav class="mobile-bar" aria-label="바로가기">
   <a href="{{ '/' | relative_url }}"><span aria-hidden="true">⌂</span>홈</a>
-  <a href="{{ '/about/greeting/' | relative_url }}"><span aria-hidden="true">☺</span>인사말</a>
+  <a href="{{ '/service/home-care/' | relative_url }}"><span aria-hidden="true">✚</span>방문요양</a>
   <a href="{{ '/about/location/' | relative_url }}"><span aria-hidden="true">◎</span>오시는길</a>
   <a href="tel:{{ site.org.tel }}" class="call"><span aria-hidden="true">✆</span>{{ site.org.tel }}</a>
 </nav>

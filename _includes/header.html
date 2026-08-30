@@ -2,7 +2,10 @@
   <div class="hd-inner">
     <a href="{{ '/' | relative_url }}" class="logo" aria-label="{{ site.org.name }} 홈으로">
       {% include logo.svg %}
-      <span class="logo-txt"><em>사회복지<br>법 인</em><b>{{ site.org.short_name }}</b></span>
+      <span class="logo-txt">
+        <b>{{ site.org.short_name }}</b>
+        <em>{{ site.org.full_name | remove: site.org.short_name | strip }}<br>{{ site.org.branch }}</em>
+      </span>
     </a>
 
     <nav class="gnb" aria-label="주메뉴">
@@ -23,14 +26,14 @@
     </nav>
 
     <div class="hd-util">
-      <a href="{{ '/about/location/' | relative_url }}" class="hd-util-btn">오시는 길</a>
+      <a href="tel:{{ site.org.tel }}" class="hd-util-tel">
+        <span>상담문의</span><strong>{{ site.org.tel }}</strong>
+      </a>
       <button type="button" class="hd-allmenu" aria-label="전체메뉴 열기" aria-expanded="false" data-menu-open>
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
-
-  <div class="gnb-bg" aria-hidden="true"></div>
 </header>
 
 <!-- 모바일 / 전체메뉴 -->
@@ -52,7 +55,7 @@
     {% endfor %}
   </nav>
   <div class="sidemenu-foot">
-    <p class="tel"><strong>{{ site.org.tel }}</strong></p>
+    <p class="tel"><a href="tel:{{ site.org.tel }}"><strong>{{ site.org.tel }}</strong></a></p>
     <p>{{ site.org.hours }}</p>
   </div>
 </div>

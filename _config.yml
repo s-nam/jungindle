@@ -1,48 +1,54 @@
 # ─────────────────────────────────────────────────────────────
-#  사이트 기본 설정
-#  ▼ 아래 값들을 우리 기관 정보로 바꾸면 사이트 전체에 반영됩니다.
+#  정인들 사회적협동조합 재가복지센터 - 사이트 설정
 # ─────────────────────────────────────────────────────────────
-title: 사회복지법인 가온
-tagline: 꿈과 희망을 응원합니다
-description: 장애인 직업재활 · 발달장애인 주간/방과후 활동 · 장애인 활동지원 서비스를 제공하는 사회복지법인입니다.
+title: 정인들 재가복지센터
+tagline: 따뜻한 마음과 바른 가치를 실천하는
+description: 세종특별자치시 재가노인복지시설. 방문요양 서비스와 노인장기요양등급 상담·신청을 지원합니다. 장기요양등급에 따라 85~100% 국가지원이 가능합니다.
 lang: ko
 
-# GitHub Pages 배포 주소.
-#   - username.github.io 저장소  → url: "https://username.github.io",  baseurl: ""
-#   - 일반 저장소(project page)  → url: "https://username.github.io",  baseurl: "/저장소이름"
-#   - 개인 도메인 연결           → url: "https://example.or.kr",        baseurl: ""
+# GitHub Pages 배포 주소 (Actions가 baseurl을 자동 주입하므로 비워둡니다)
 url: ""
 baseurl: ""
 
-# ── 기관 정보 (푸터 / 연락처 / 지도에 사용) ──────────────────
+# ── 기관 정보 (헤더 / 푸터 / 모든 페이지에 반영) ─────────────
 org:
-  name: 사회복지법인 가온
-  short_name: 가온
-  ceo: 홍길동
-  zipcode: "00000"
-  address: OO도 OO시 OO읍 OO길 000
-  tel: "000-0000-0000"
-  fax: "000-0000-0000"
-  email: example@example.com
-  hours: 월~금 09:00 ~ 18:00 (주말 및 공휴일 휴무)
-  copyright: Copyright 2026 사회복지법인 가온 All Rights Reserved.
-  # 카카오/네이버 지도 임베드 주소 (없으면 비워두면 안내문구가 표시됩니다)
+  name: 정인들 사회적협동조합 재가복지센터
+  full_name: 정인들 사회적협동조합
+  short_name: 정인들
+  branch: 재가복지센터
+  slogan: 따뜻한 마음과 바른 가치를 실천하는
+  category: 재가노인복지시설
+  ceo_title: 대표 · 센터장
+  ceo: 이정인
+  zipcode: "30150"
+  address: 세종특별자치시 한누리대로 2003, 702호 (소담동, 펠리체타워3)
+  address_short: 세종 한누리대로 2003 펠리체타워3 702호
+  address_hint: 소담동 세종상공회의소가 있는 건물입니다.
+  tel: "044-865-7005"
+  mobile: "010-3454-8984"
+  fax: "044-865-8005"
+  email: jidcoop@naver.com
+  hours: 월~금 09:30 ~ 18:00 (토·일 휴무)
+  hours_short: 월~금 09:30~18:00
+  closed: 토요일 · 일요일 · 공휴일 휴무
+  naver_place: "https://naver.me/FLEnikGd"
+  # 지도 임베드 주소 (네이버 지도 → 공유 → 지도 퍼가기 에서 발급)
   map_embed: ""
+  copyright: Copyright 2026 정인들 사회적협동조합 재가복지센터 All Rights Reserved.
 
 # ── 관련 사이트 (푸터 셀렉트박스) ───────────────────────────
 family_sites:
+  - { name: 노인장기요양보험, url: "https://www.longtermcare.or.kr" }
+  - { name: 국민건강보험공단, url: "https://www.nhis.or.kr" }
   - { name: 보건복지부, url: "https://www.mohw.go.kr" }
-  - { name: 한국장애인개발원, url: "https://www.koddi.or.kr" }
-  - { name: 사회복지시설정보시스템, url: "https://www.w4c.go.kr" }
+  - { name: 중앙치매센터, url: "https://www.nid.or.kr" }
+  - { name: 세종특별자치시청, url: "https://www.sejong.go.kr" }
 
 # ── 게시판(컬렉션) ──────────────────────────────────────────
 collections:
   notice:
     output: true
     permalink: /community/notice/:name/
-  press:
-    output: true
-    permalink: /community/press/:name/
   dataroom:
     output: true
     permalink: /community/dataroom/:name/
@@ -53,15 +59,10 @@ collections:
 defaults:
   - scope: { path: "", type: notice }
     values: { layout: post, board: notice, board_title: 공지사항, board_url: /community/notice/ }
-  - scope: { path: "", type: press }
-    values: { layout: post, board: press, board_title: 언론보도자료, board_url: /community/press/ }
   - scope: { path: "", type: dataroom }
-    values: { layout: post, board: dataroom, board_title: 자료실&소식지, board_url: /community/dataroom/ }
+    values: { layout: post, board: dataroom, board_title: 자료실, board_url: /community/dataroom/ }
   - scope: { path: "", type: gallery }
     values: { layout: post, board: gallery, board_title: 포토게시판, board_url: /community/gallery/ }
-
-sass:
-  style: compressed
 
 exclude:
   - Gemfile

@@ -8,26 +8,26 @@ title: null
   <div class="hero-track">
     <div class="hero-slide on" data-bg="1">
       <div class="hero-copy">
-        <p class="eyebrow">{{ site.org.name }}</p>
-        <h2>꿈과 희망을<br>응원합니다</h2>
-        <p class="desc">장애인의 자립과 사회통합을 위해 함께 걷습니다.</p>
-        <a href="{{ '/about/greeting/' | relative_url }}" class="btn btn-ghost">법인 소개 보기</a>
+        <p class="eyebrow">{{ site.org.slogan }}</p>
+        <h2>어르신 곁에서<br>하루를 함께합니다</h2>
+        <p class="desc">세종특별자치시 재가노인복지시설 · 정인들 사회적협동조합 재가복지센터</p>
+        <a href="{{ '/service/home-care/' | relative_url }}" class="btn btn-ghost">방문요양 안내</a>
       </div>
     </div>
     <div class="hero-slide" data-bg="2">
       <div class="hero-copy">
-        <p class="eyebrow">함께하는 복지</p>
-        <h2>더 나은 세상을<br>응원합니다</h2>
-        <p class="desc">직업재활부터 주간·방과후 활동까지, 생애주기별 서비스를 제공합니다.</p>
-        <a href="{{ '/business/vocational/' | relative_url }}" class="btn btn-ghost">사업 소개 보기</a>
+        <p class="eyebrow">국가지원 안내</p>
+        <h2>방문요양 비용의<br>85~100%를 지원받으세요</h2>
+        <p class="desc">장기요양등급을 받으시면 본인부담금은 최대 15%입니다. 등급 신청부터 도와드립니다.</p>
+        <a href="{{ '/service/grade/' | relative_url }}" class="btn btn-ghost">등급 신청 안내</a>
       </div>
     </div>
     <div class="hero-slide" data-bg="3">
       <div class="hero-copy">
-        <p class="eyebrow">나눔마당</p>
-        <h2>당신의 나눔이<br>내일을 바꿉니다</h2>
-        <p class="desc">작은 정성이 모여 큰 변화를 만듭니다.</p>
-        <a href="{{ '/support/donate/' | relative_url }}" class="btn btn-ghost">후원 안내</a>
+        <p class="eyebrow">상담 문의</p>
+        <h2>어떤 서비스가 필요한지<br>모르셔도 괜찮습니다</h2>
+        <p class="desc">전화 한 통이면 등급 확인부터 서비스 설계까지 무료로 안내해 드립니다.</p>
+        <a href="tel:{{ site.org.tel }}" class="btn btn-ghost">{{ site.org.tel }} 전화상담</a>
       </div>
     </div>
   </div>
@@ -42,12 +42,30 @@ title: null
   <div class="inner">
     <ul class="quick-list">
       <li>
-        <a href="{{ '/about/greeting/' | relative_url }}">
+        <a href="{{ '/service/home-care/' | relative_url }}">
           <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M24 25a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 4c-8 0-15 4.5-15 10v3h30v-3c0-5.5-7-10-15-10Z"/></svg>
+            <svg viewBox="0 0 48 48"><path d="M24 42.6 21 39.9C10.4 30.3 3.4 23.9 3.4 16.1 3.4 9.7 8.4 4.7 14.8 4.7c3.6 0 7.1 1.7 9.2 4.3 2.1-2.6 5.6-4.3 9.2-4.3 6.4 0 11.4 5 11.4 11.4 0 7.8-7 14.2-17.6 23.8l-3 2.7Z"/></svg>
           </span>
-          <strong>인사말</strong>
-          <em>장애인과 함께하는 복지기관을 소개합니다.</em>
+          <strong>방문요양</strong>
+          <em>요양보호사가 댁으로 찾아가 도와드립니다.</em>
+        </a>
+      </li>
+      <li>
+        <a href="{{ '/service/grade/' | relative_url }}">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M34 4H14a4 4 0 0 0-4 4v32a4 4 0 0 0 4 4h20a4 4 0 0 0 4-4V8a4 4 0 0 0-4-4Zm-4 30H18v-4h12v4Zm0-8H18v-4h12v4Zm0-8H18v-4h12v4Z"/></svg>
+          </span>
+          <strong>장기요양등급 신청</strong>
+          <em>등급 신청 절차를 처음부터 도와드립니다.</em>
+        </a>
+      </li>
+      <li>
+        <a href="{{ '/service/fee/' | relative_url }}">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M24 4C13 4 4 13 4 24s9 20 20 20 20-9 20-20S35 4 24 4Zm2 31v3h-4v-3c-3.3-.5-6-2.8-6.4-6.4h4.1c.3 1.8 1.9 3 4.3 3 2.5 0 3.9-1.1 3.9-2.7 0-1.5-1-2.2-4.2-3-4.4-1-7.4-2.3-7.4-6.2 0-3.2 2.4-5.4 5.7-6V11h4v3.7c3.3.6 5.4 2.9 5.6 6.1h-4c-.2-1.7-1.4-2.9-3.6-2.9-2.3 0-3.6 1-3.6 2.5 0 1.4 1.1 2.1 4.3 2.9 4.4 1 7.3 2.5 7.3 6.4 0 3.3-2.4 5.5-6 6.3Z"/></svg>
+          </span>
+          <strong>이용요금 안내</strong>
+          <em>본인부담금과 감경 대상을 안내합니다.</em>
         </a>
       </li>
       <li>
@@ -56,72 +74,63 @@ title: null
             <svg viewBox="0 0 48 48"><path d="M24 4c-7.7 0-14 6.3-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.7-6.3-14-14-14Zm0 19a5 5 0 1 1 0-10 5 5 0 0 1 0 10Z"/></svg>
           </span>
           <strong>오시는 길</strong>
-          <em>{{ site.org.short_name }}으로 오시는 길 안내입니다.</em>
-        </a>
-      </li>
-      <li>
-        <a href="{{ '/about/purpose/' | relative_url }}">
-          <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M24 6 8 13v10c0 10 6.8 17.6 16 19 9.2-1.4 16-9 16-19V13L24 6Zm-2 25-7-7 2.8-2.8L22 25.4l10.2-10.2L35 18 22 31Z"/></svg>
-          </span>
-          <strong>설립목적</strong>
-          <em>법인의 설립목적과 비전을 안내합니다.</em>
-        </a>
-      </li>
-      <li>
-        <a href="{{ '/support/donate/' | relative_url }}">
-          <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M24 41.6 21 38.9C10.4 29.3 3.4 22.9 3.4 15.1 3.4 8.7 8.4 3.7 14.8 3.7c3.6 0 7.1 1.7 9.2 4.3 2.1-2.6 5.6-4.3 9.2-4.3 6.4 0 11.4 5 11.4 11.4 0 7.8-7 14.2-17.6 23.8l-3 2.7Z"/></svg>
-          </span>
-          <strong>후원안내</strong>
-          <em>{{ site.org.name }} 후원 방법을 소개합니다.</em>
+          <em>{{ site.org.address_short }}</em>
         </a>
       </li>
     </ul>
   </div>
 </section>
 
-<!-- ── 법인사업소개 ─────────────────────────────────────── -->
+<!-- ── 이용대상 ─────────────────────────────────────────── -->
 <section class="biz">
   <div class="inner">
     <header class="sec-head">
-      <h2>법인사업소개</h2>
-      <p>{{ site.org.name }}의 사업에 대하여 소개합니다.</p>
+      <h2>이런 분들이 이용하실 수 있습니다</h2>
+      <p>장기요양등급을 받으신 어르신이라면 누구나 방문요양 서비스를 신청하실 수 있습니다.</p>
     </header>
 
-    <ul class="biz-list">
+    <ul class="biz-list biz-list-2">
       <li>
-        <a href="{{ '/business/vocational/' | relative_url }}">
+        <a href="{{ '/service/process/' | relative_url }}">
           <span class="num">01</span>
-          <strong>장애인 직업재활</strong>
-          <p>개별 역량 분석을 통해 능력을 최대한 고양시키고, 안정적인 작업환경에서 사회적 역할을 수행할 기회를 제공합니다.</p>
-          <em class="more">자세히 보기</em>
+          <strong>만 65세 이상</strong>
+          <p>노인성 질환으로 거동이 불편하여 일상생활에 도움이 필요하신 어르신.</p>
+          <em class="more">이용 절차 보기</em>
         </a>
       </li>
       <li>
-        <a href="{{ '/business/daytime/' | relative_url }}">
+        <a href="{{ '/service/process/' | relative_url }}">
           <span class="num">02</span>
-          <strong>발달장애인 주간활동</strong>
-          <p>지역사회에서 원하는 활동을 스스로 선택하는 자율의지를 키우고, 다양한 체험으로 사회성 발달을 지원합니다.</p>
-          <em class="more">자세히 보기</em>
+          <strong>만 65세 미만</strong>
+          <p>치매 · 파킨슨 · 뇌혈관질환 등 노인성 질병으로 도움이 필요하신 분.</p>
+          <em class="more">이용 절차 보기</em>
         </a>
       </li>
-      <li>
-        <a href="{{ '/business/afterschool/' | relative_url }}">
-          <span class="num">03</span>
-          <strong>발달장애인 방과후활동</strong>
-          <p>학교 수업을 마친 후 지역사회 내에서 자기결정권과 참여에 기반한 활동을 안전하게 지원합니다.</p>
-          <em class="more">자세히 보기</em>
-        </a>
-      </li>
-      <li>
-        <a href="{{ '/business/activity-support/' | relative_url }}">
-          <span class="num">04</span>
-          <strong>장애인 활동지원</strong>
-          <p>혼자서 일상생활과 사회생활을 하기 어려운 장애인에게 활동지원 서비스를 제공합니다.</p>
-          <em class="more">자세히 보기</em>
-        </a>
-      </li>
+    </ul>
+
+    <p class="biz-note">
+      등급이 없으셔도 괜찮습니다. <strong>장기요양등급 신청부터 무료로 상담·대행</strong>해 드립니다.
+      <a href="tel:{{ site.org.tel }}">{{ site.org.tel }}</a>
+    </p>
+  </div>
+</section>
+
+<!-- ── 서비스 내용 ──────────────────────────────────────── -->
+<section class="svc">
+  <div class="inner">
+    <header class="sec-head">
+      <h2>방문요양 서비스 내용</h2>
+      <p>요양보호사가 어르신 댁을 방문하여 일상을 함께합니다.</p>
+      <a href="{{ '/service/home-care/' | relative_url }}" class="sec-more">더보기 +</a>
+    </header>
+
+    <ul class="svc-list">
+      <li><strong>신체활동 지원</strong><span>세면 · 목욕 · 식사 · 옷 갈아입기 · 화장실 이용 · 체위 변경 보조</span></li>
+      <li><strong>가사 및 일상생활 지원</strong><span>취사 · 세탁 · 청소 · 주변 정돈 · 장보기</span></li>
+      <li><strong>개인활동 지원</strong><span>병원 동행 · 관공서 및 은행 업무 동행 · 외출 시 부축</span></li>
+      <li><strong>정서 지원</strong><span>말벗 · 격려와 위로 · 안부 확인 · 가족 상담</span></li>
+      <li><strong>인지활동 지원</strong><span>치매 어르신 대상 인지자극 활동 및 잔존기능 유지 훈련</span></li>
+      <li><strong>가족 상담</strong><span>돌봄 부담 상담 및 지역 복지자원 연계 안내</span></li>
     </ul>
   </div>
 </section>
@@ -130,7 +139,7 @@ title: null
 <section class="photo">
   <div class="inner">
     <header class="sec-head">
-      <h2>포토게시판</h2>
+      <h2>센터 이야기</h2>
       <p>{{ site.org.short_name }}의 다양한 소식을 사진으로 만나보세요.</p>
       <a href="{{ '/community/gallery/' | relative_url }}" class="sec-more">더보기 +</a>
     </header>
@@ -154,24 +163,16 @@ title: null
   </div>
 </section>
 
-<!-- ── 공지사항 / 언론보도 ──────────────────────────────── -->
+<!-- ── 공지사항 / 자료실 ────────────────────────────────── -->
 <section class="news">
   <div class="inner news-grid">
-    {% assign boards = "notice,press" | split: "," %}
-    {% for b in boards %}
-    {% assign meta_title = "공지사항" %}
-    {% assign meta_url = "/community/notice/" %}
-    {% if b == "press" %}
-      {% assign meta_title = "언론보도자료" %}
-      {% assign meta_url = "/community/press/" %}
-    {% endif %}
     <div class="news-col">
       <header class="news-head">
-        <h2>{{ meta_title }}</h2>
-        <a href="{{ meta_url | relative_url }}" class="sec-more">더보기 +</a>
+        <h2>공지사항</h2>
+        <a href="{{ '/community/notice/' | relative_url }}" class="sec-more">더보기 +</a>
       </header>
       <ul class="news-list">
-        {% assign rows = site[b] | sort: 'date' | reverse %}
+        {% assign rows = site.notice | sort: 'date' | reverse %}
         {% for item in rows limit: 5 %}
         <li>
           <a href="{{ item.url | relative_url }}">
@@ -184,15 +185,38 @@ title: null
         {% endfor %}
       </ul>
     </div>
-    {% endfor %}
+
+    <div class="news-col">
+      <header class="news-head">
+        <h2>자료실</h2>
+        <a href="{{ '/community/dataroom/' | relative_url }}" class="sec-more">더보기 +</a>
+      </header>
+      <ul class="news-list">
+        {% assign rows = site.dataroom | sort: 'date' | reverse %}
+        {% for item in rows limit: 5 %}
+        <li>
+          <a href="{{ item.url | relative_url }}">
+            <span class="tit">{{ item.title }}</span>
+            <span class="date">{{ item.date | date: "%Y-%m-%d" }}</span>
+          </a>
+        </li>
+        {% else %}
+        <li class="empty">등록된 게시물이 없습니다.</li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </section>
 
-<!-- ── 후원 CTA ─────────────────────────────────────────── -->
+<!-- ── 상담 CTA ─────────────────────────────────────────── -->
 <section class="cta">
   <div class="inner">
-    <p class="cta-eyebrow">나눔마당</p>
-    <h2>당신의 작은 나눔이<br>누군가의 오늘을 바꿉니다.</h2>
-    <a href="{{ '/support/donate/' | relative_url }}" class="btn btn-white">후원 안내 보기</a>
+    <p class="cta-eyebrow">{{ site.org.slogan }}</p>
+    <h2>혼자 고민하지 마세요.<br>{{ site.org.short_name }}이 함께합니다.</h2>
+    <p class="cta-desc">{{ site.org.hours }} · 상담은 무료입니다.</p>
+    <div class="cta-btns">
+      <a href="tel:{{ site.org.tel }}" class="btn btn-white">{{ site.org.tel }}</a>
+      <a href="{{ '/community/contact/' | relative_url }}" class="btn btn-ghost">문의 방법 안내</a>
+    </div>
   </div>
 </section>

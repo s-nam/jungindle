@@ -4,7 +4,8 @@
       <ul class="ft-links">
         <li><a href="{{ '/privacy/' | relative_url }}" class="strong">개인정보처리방침</a></li>
         <li><a href="{{ '/about/location/' | relative_url }}">오시는 길</a></li>
-        <li><a href="{{ '/support/donate/' | relative_url }}">후원안내</a></li>
+        <li><a href="{{ '/community/contact/' | relative_url }}">상담 · 문의</a></li>
+        <li><a href="{{ '/join/caregiver/' | relative_url }}">요양보호사 모집</a></li>
       </ul>
 
       <div class="ft-family">
@@ -27,14 +28,16 @@
       </div>
       <div class="ft-info">
         <p>
-          <span>대표 : {{ site.org.ceo }}</span>
+          <span>{{ site.org.ceo_title }} : {{ site.org.ceo }}</span>
           <span>주소 : (우){{ site.org.zipcode }} {{ site.org.address }}</span>
         </p>
         <p>
           <span>TEL : {{ site.org.tel }}</span>
+          <span>휴대전화 : {{ site.org.mobile }}</span>
           <span>FAX : {{ site.org.fax }}</span>
           <span>E-mail : {{ site.org.email }}</span>
         </p>
+        <p><span>운영시간 : {{ site.org.hours }}</span></p>
         <p class="copy">{{ site.org.copyright }}</p>
       </div>
     </div>

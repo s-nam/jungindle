@@ -2,41 +2,56 @@
 layout: page
 title: CI소개
 visual: about
-lead: 법인의 상징(CI)에 담긴 의미를 소개합니다.
+lead: 정인들의 상징에 담긴 의미를 소개합니다.
 permalink: /about/ci/
 ---
 
 ## 심볼마크
 
-<div style="display:flex; align-items:center; gap:40px; flex-wrap:wrap; padding:40px; background:#f6f8fa; border-radius:14px; margin-bottom:28px;" markdown="0">
-  <svg viewBox="0 0 64 64" style="width:140px;height:140px;flex:none">
-    <defs>
-      <linearGradient id="ci" x1="0" y1="1" x2="1" y2="0">
-        <stop offset="0%" stop-color="#1f9d55"/>
-        <stop offset="55%" stop-color="#2bb673"/>
-        <stop offset="100%" stop-color="#1878c9"/>
-      </linearGradient>
-    </defs>
-    <circle cx="32" cy="32" r="30" fill="none" stroke="url(#ci)" stroke-width="3.5"/>
-    <path d="M8 38c6-7 12-7 18 0s12 7 18 0 8-6 12-3v14a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6z" fill="url(#ci)" opacity=".92"/>
-    <path d="M10 27c6-8 13-8 19-1s11 6 16-1" fill="none" stroke="url(#ci)" stroke-width="3.5" stroke-linecap="round"/>
-  </svg>
+<div class="ci-hero" markdown="0">
+  <div class="ci-mark">
+    {% include logo.svg %}
+  </div>
   <div>
-    <p style="margin:0 0 8px; font-size:20px; font-weight:800;">원 안의 물결</p>
-    <p style="margin:0; color:#4a5665;">끊이지 않고 흐르는 물결은 <strong>이어지는 돌봄</strong>을,<br>원은 <strong>지역사회의 품</strong>을 뜻합니다.</p>
+    <p class="ci-lead">정人들</p>
+    <p>사람(人)을 중심으로 따뜻한 복지와 나눔을 실천하는<br>사회적협동조합의 가치를 담은 로고입니다.</p>
   </div>
 </div>
 
-## 색상 체계
+## 로고의 의미
 
-| 구분 | 색상 | 의미 |
-| --- | --- | --- |
-| Green | `#1F9D55` | 성장과 회복, 함께 자라는 힘 |
-| Mint | `#2BB673` | 따뜻함과 돌봄 |
-| Blue | `#1878C9` | 신뢰와 전문성 |
+1. **정(情)** — 사람 사이의 따뜻한 정, 배려와 나눔을 의미합니다.
+2. **人** — 사람을 상징하며, 이용자와 지역사회, 함께하는 구성원 모두를 뜻합니다.
+3. **하단의 곡선** — 사람을 감싸 안는 품, 공동체의 연결과 안정감을 표현하였으며,
+   함께 성장하는 복지공동체를 상징합니다.
+4. **중앙의 골드 포인트** — 희망과 미래, 따뜻한 가치를 실천하는 빛을 의미합니다.
+
+## 전용 색상
+
+<div class="ci-colors" markdown="0">
+  <div class="ci-color">
+    <span class="chip" style="background:#1f6da3"></span>
+    <strong>Blue</strong>
+    <em>C 85 · M 48 · Y 18 · K 5</em>
+    <em>신뢰와 전문성</em>
+  </div>
+  <div class="ci-color">
+    <span class="chip" style="background:#d8bf8c"></span>
+    <strong>Gold</strong>
+    <em>C 12 · M 18 · Y 42 · K 0</em>
+    <em>희망과 따뜻한 가치</em>
+  </div>
+</div>
+
+<blockquote>
+<p>웹사이트에 적용된 HEX 값은 명함에 지정된 CMYK를 화면용으로 환산한 근사치입니다.
+디자이너에게 받은 정확한 HEX 값이 있다면 <code>assets/css/style.css</code> 상단의
+<code>--blue</code>, <code>--gold</code> 두 줄만 교체하면 사이트 전체에 반영됩니다.</p>
+</blockquote>
 
 ## 사용 규정
 
 - 심볼과 로고타입의 비율·간격은 임의로 변경하지 않습니다.
 - 배경이 복잡한 이미지 위에서는 흰색 단색 버전을 사용합니다.
-- 최소 사용 크기는 가로 24px 이상을 권장합니다.
+- 지정된 두 가지 색 외의 색상으로 변형하지 않습니다.
+- 최소 사용 크기는 가로 40px 이상을 권장합니다.
