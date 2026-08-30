@@ -1,0 +1,42 @@
+<footer class="ft">
+  <div class="ft-top">
+    <div class="inner">
+      <ul class="ft-links">
+        <li><a href="{{ '/privacy/' | relative_url }}" class="strong">개인정보처리방침</a></li>
+        <li><a href="{{ '/about/location/' | relative_url }}">오시는 길</a></li>
+        <li><a href="{{ '/support/donate/' | relative_url }}">후원안내</a></li>
+      </ul>
+
+      <div class="ft-family">
+        <label class="sr-only" for="familySite">관련 사이트</label>
+        <select id="familySite" data-family-site>
+          <option value="">관련 사이트</option>
+          {% for s in site.family_sites %}
+          <option value="{{ s.url }}">{{ s.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="ft-body">
+    <div class="inner">
+      <div class="ft-logo">
+        {% include logo.svg %}
+        <strong>{{ site.org.name }}</strong>
+      </div>
+      <div class="ft-info">
+        <p>
+          <span>대표 : {{ site.org.ceo }}</span>
+          <span>주소 : (우){{ site.org.zipcode }} {{ site.org.address }}</span>
+        </p>
+        <p>
+          <span>TEL : {{ site.org.tel }}</span>
+          <span>FAX : {{ site.org.fax }}</span>
+          <span>E-mail : {{ site.org.email }}</span>
+        </p>
+        <p class="copy">{{ site.org.copyright }}</p>
+      </div>
+    </div>
+  </div>
+</footer>

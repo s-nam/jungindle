@@ -1,0 +1,57 @@
+---
+layout: page
+---
+{%- assign items = site[page.board] | sort: 'date' | reverse -%}
+{%- assign total = items | size -%}
+
+{% if page.board_style == 'gallery' %}
+  {% if total == 0 %}
+    <p class="board-empty">등록된 게시물이 없습니다.</p>
+  {% else %}
+  <ul class="gallery-grid">
+    {% for item in items %}
+    <li>
+      <a href="{{ item.url | relative_url }}">
+        <span class="thumb" {% if item.thumb != nil and item.thumb != '' %}style="background-image:url('{{ item.thumb | relative_url }}')"{% endif %}>
+          {% if item.thumb == nil or item.thumb == '' %}<em>{{ site.org.short_name }}</em>{% endif %}
+        </span>
+        <strong class="tit">{{ item.title }}</strong>
+        <span class="date">{{ item.date | date: "%Y-%m-%d" }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+{% else %}
+  <div class="board-head">
+    <p>전체 <strong>{{ total }}</strong>건</p>
+  </div>
+
+  {% if total == 0 %}
+    <p class="board-empty">등록된 게시물이 없습니다.</p>
+  {% else %}
+  <table class="board-list">
+    <caption class="sr-only">{{ page.title }} 목록</caption>
+    <colgroup>
+      <col class="c-no"><col><col class="c-date"><col class="c-file">
+    </colgroup>
+    <thead>
+      <tr><th scope="col" class="c-no">번호</th><th scope="col" class="c-tit">제목</th><th scope="col" class="c-date">작성일</th><th scope="col" class="c-file">첨부</th></tr>
+    </thead>
+    <tbody>
+      {% for item in items %}
+      <tr>
+        <td class="c-no">{% if item.pinned %}<span class="badge">공지</span>{% else %}{{ total | minus: forloop.index0 }}{% endif %}</td>
+        <td class="c-tit">
+          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          {% if item.hot %}<span class="badge hot">인기</span>{% endif %}
+        </td>
+        <td class="c-date">{{ item.date | date: "%Y-%m-%d" }}</td>
+        <td class="c-file">{% if item.file != nil and item.file != '' %}<a href="{{ item.file | relative_url }}" download>첨부</a>{% else %}-{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+{% endif %}

@@ -1,0 +1,29 @@
+# 상단 메뉴 구조. 여기만 고치면 PC 메가메뉴 / 모바일 메뉴 / 서브페이지 좌측메뉴가 모두 바뀝니다.
+- title: 법인소개
+  children:
+    - { title: 인사말,      url: /about/greeting/ }
+    - { title: 설립목적,    url: /about/purpose/ }
+    - { title: 법인연혁,    url: /about/history/ }
+    - { title: 조직도,      url: /about/org-chart/ }
+    - { title: CI소개,      url: /about/ci/ }
+    - { title: 오시는 길,   url: /about/location/ }
+
+- title: 법인사업소개
+  children:
+    - { title: 직업재활센터,                url: /business/vocational/ }
+    - { title: 발달장애인 주간활동제공기관, url: /business/daytime/ }
+    - { title: 발달장애인 방과후활동제공기관, url: /business/afterschool/ }
+    - { title: 장애인활동지원제공기관,      url: /business/activity-support/ }
+    - { title: 장애인도우미지원사업,        url: /business/helper/ }
+
+- title: 나눔마당
+  children:
+    - { title: 후원안내, url: /support/donate/ }
+
+- title: 커뮤니티
+  children:
+    - { title: 공지사항,        url: /community/notice/ }
+    - { title: 언론보도자료,    url: /community/press/ }
+    - { title: 자료실&소식지,   url: /community/dataroom/ }
+    - { title: 포토게시판,      url: /community/gallery/ }
+    - { title: 고충상담 게시판, url: /community/counseling/ }

@@ -1,0 +1,11 @@
+source "https://rubygems.org"
+
+gem "jekyll", "~> 4.3"
+
+group :jekyll_plugins do
+  gem "jekyll-sitemap"
+  gem "jekyll-seo-tag"
+end
+
+# Windows / JRuby 호환
+gem "webrick", "~> 1.8"

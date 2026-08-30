@@ -1,0 +1,71 @@
+---
+layout: default
+---
+{%- assign items = site[page.board] | sort: 'date' | reverse -%}
+
+<div class="sub-visual" data-visual="community">
+  <div class="inner">
+    <p class="sub-visual-eyebrow">커뮤니티</p>
+    <h1 class="sub-visual-title">{{ page.board_title }}</h1>
+  </div>
+</div>
+
+<nav class="breadcrumb" aria-label="현재 위치">
+  <div class="inner">
+    <a href="{{ '/' | relative_url }}">홈</a>
+    <span aria-hidden="true">›</span><span>커뮤니티</span>
+    <span aria-hidden="true">›</span><strong>{{ page.board_title }}</strong>
+  </div>
+</nav>
+
+<div class="sub-body">
+  <div class="inner">
+    <article class="view">
+      <header class="view-head">
+        <h2>{{ page.title }}</h2>
+        <p class="view-meta">
+          <span>작성일 {{ page.date | date: "%Y-%m-%d" }}</span>
+          {% if page.author %}<span>작성자 {{ page.author }}</span>{% endif %}
+        </p>
+      </header>
+
+      {% if page.thumb != nil and page.thumb != '' %}
+      <p class="view-thumb"><img src="{{ page.thumb | relative_url }}" alt=""></p>
+      {% endif %}
+
+      <div class="prose view-body">
+        {{ content }}
+      </div>
+
+      {% if page.file != nil and page.file != '' %}
+      <p class="view-file"><a href="{{ page.file | relative_url }}" download>첨부파일 내려받기</a></p>
+      {% endif %}
+
+      {% if page.source_url != nil and page.source_url != '' %}
+      <p class="view-file"><a href="{{ page.source_url }}" target="_blank" rel="noopener">기사 원문 보기</a></p>
+      {% endif %}
+    </article>
+
+    <nav class="view-nav" aria-label="이전 다음 글">
+      {%- for item in items -%}
+        {%- if item.url == page.url -%}
+          {%- assign idx = forloop.index0 -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- assign prev_i = idx | minus: 1 -%}
+      {%- assign next_i = idx | plus: 1 -%}
+
+      <div class="view-nav-row">
+        <span class="lb">이전글</span>
+        {% if idx > 0 %}<a href="{{ items[prev_i].url | relative_url }}">{{ items[prev_i].title }}</a>{% else %}<em>이전 글이 없습니다.</em>{% endif %}
+      </div>
+      <div class="view-nav-row">
+        <span class="lb">다음글</span>
+        {% assign last = items | size | minus: 1 %}
+        {% if idx < last %}<a href="{{ items[next_i].url | relative_url }}">{{ items[next_i].title }}</a>{% else %}<em>다음 글이 없습니다.</em>{% endif %}
+      </div>
+    </nav>
+
+    <p class="view-btns"><a href="{{ page.board_url | relative_url }}" class="btn">목록으로</a></p>
+  </div>
+</div>

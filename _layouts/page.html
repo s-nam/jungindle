@@ -1,0 +1,49 @@
+---
+layout: default
+---
+{%- assign cur_group = nil -%}
+{%- assign cur_child = nil -%}
+{%- for item in site.data.nav -%}
+  {%- for child in item.children -%}
+    {%- if page.url contains child.url -%}
+      {%- assign cur_group = item -%}
+      {%- assign cur_child = child -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+
+<div class="sub-visual" data-visual="{{ page.visual | default: 'about' }}">
+  <div class="inner">
+    <p class="sub-visual-eyebrow">{{ cur_group.title | default: site.org.name }}</p>
+    <h1 class="sub-visual-title">{{ page.heading | default: page.title }}</h1>
+    {% if page.lead %}<p class="sub-visual-lead">{{ page.lead }}</p>{% endif %}
+  </div>
+</div>
+
+<nav class="breadcrumb" aria-label="현재 위치">
+  <div class="inner">
+    <a href="{{ '/' | relative_url }}">홈</a>
+    {% if cur_group %}<span aria-hidden="true">›</span><span>{{ cur_group.title }}</span>{% endif %}
+    <span aria-hidden="true">›</span><strong>{{ page.title }}</strong>
+  </div>
+</nav>
+
+{% if cur_group %}
+<div class="sub-tabs">
+  <div class="inner">
+    <ul>
+      {% for child in cur_group.children %}
+      <li><a href="{{ child.url | relative_url }}" {% if child.url == cur_child.url %}class="on" aria-current="page"{% endif %}>{{ child.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endif %}
+
+<div class="sub-body">
+  <div class="inner">
+    <div class="prose">
+      {{ content }}
+    </div>
+  </div>
+</div>
