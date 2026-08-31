@@ -27,7 +27,7 @@ permalink: /about/location/
 | 전화 | {{ site.org.tel }} |
 | 휴대전화 | {{ site.org.mobile }} |
 | 팩스 | {{ site.org.fax }} |
-| 이메일 | {{ site.org.email }} |
+| 이메일 | {% include email.html %} |
 | 운영시간 | {{ site.org.hours }} |
 
 ## 주차 안내

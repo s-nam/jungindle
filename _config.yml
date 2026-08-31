@@ -30,7 +30,11 @@ org:
   tel: "044-865-7005"
   mobile: "010-3454-8984"
   fax: "044-865-8005"
-  email: jidcoop@naver.com
+  # 스팸봇 수집을 막기 위해 아이디와 도메인을 나눠 둡니다.
+  # 화면에는 '아이디 + @모양 그림 + 도메인' 으로 조립되어 표시됩니다.
+  # (합쳐진 주소가 HTML 소스에 남지 않습니다 - _includes/email.html 참고)
+  email_user: jidcoop
+  email_domain: naver.com
   hours: 월~금 09:00 ~ 18:00 (토·일 휴무)
   hours_short: 월~금 09:00~18:00
   closed: 토요일 · 일요일 · 공휴일 휴무

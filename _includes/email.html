@@ -1,0 +1,7 @@
+{%- comment -%}
+  이메일 주소를 스팸봇이 긁어가지 못하게 조립해서 출력합니다.
+  '@' 는 문자가 아니라 SVG 그림이라, 완성된 주소가 HTML 소스에 존재하지 않습니다.
+  브라우저에서는 main.js 가 mailto 링크와 복사 버튼을 붙여줍니다.
+  사용법:  {% include email.html %}
+{%- endcomment -%}
+<span class="email" data-email data-u="{{ site.org.email_user }}" data-d="{{ site.org.email_domain }}"><span>{{ site.org.email_user }}</span><svg class="email-at" viewBox="3.1 3.6 16.8 16.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="골뱅이"><circle cx="11.5" cy="12" r="3.5"/><path d="M15 8.5v5.2c0 1 .8 1.8 1.8 1.8 1.1 0 2-.9 2-2v-1.5a7.5 7.5 0 1 0-3 6"/></svg><span>{{ site.org.email_domain }}</span></span>

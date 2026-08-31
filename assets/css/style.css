@@ -473,6 +473,28 @@ table { border-collapse: collapse; width: 100%; }
 .orgchart .row { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 14px; }
 .orgchart .bar { width: 2px; height: 26px; background: var(--line); margin: 0 auto; }
 
+/* ── 이메일 (스팸봇 수집 방지) ─────────────────────────
+   '@' 를 SVG 로 그려 넣어 완성된 주소가 HTML 소스에 남지 않게 합니다.
+   main.js 가 브라우저에서 mailto 링크와 복사 버튼을 붙입니다. */
+.email { display: inline-flex; align-items: center; white-space: nowrap; }
+.email-at {
+  width: .85em; height: .85em; margin: 0 .01em; flex: none;
+  position: relative; top: .02em;
+}
+a.email:hover { color: var(--blue-d); }
+a.email:hover span { text-decoration: underline; text-underline-offset: 3px; }
+
+.email-copy {
+  margin-left: 8px; padding: 2px 9px; flex: none;
+  font-size: 12px; line-height: 1.6; color: var(--ink-3);
+  border: 1px solid var(--line); border-radius: 999px; background: #fff;
+  transition: .15s;
+}
+.email-copy:hover { border-color: var(--blue); color: var(--blue-d); }
+.email-copy.done { border-color: var(--blue); color: var(--blue-d); background: var(--bg-2); }
+.ft .email-copy { background: transparent; border-color: rgba(255, 255, 255, .28); color: rgba(255, 255, 255, .7); }
+.ft .email-copy:hover, .ft .email-copy.done { border-color: #fff; color: #fff; }
+
 /* CI 소개 */
 .ci-hero {
   display: flex; align-items: center; gap: 44px; flex-wrap: wrap;
@@ -572,7 +594,7 @@ table { border-collapse: collapse; width: 100%; }
 .ft-logo .logo-mark { width: 84px; height: 41px; }
 .ft-logo strong { color: #fff; font-size: 17px; letter-spacing: -.02em; }
 .ft-info { font-size: 14px; line-height: 1.9; }
-.ft-info p span { margin-right: 22px; display: inline-block; }
+.ft-info p > span { margin-right: 22px; display: inline-block; }
 .ft-info .copy { margin-top: 12px; font-size: 13px; color: rgba(255, 255, 255, .4); }
 
 /* ── 플로팅 ───────────────────────────────────────────── */

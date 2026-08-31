@@ -35,7 +35,7 @@
           <span>TEL : {{ site.org.tel }}</span>
           <span>휴대전화 : {{ site.org.mobile }}</span>
           <span>FAX : {{ site.org.fax }}</span>
-          <span>E-mail : {{ site.org.email }}</span>
+          <span>E-mail : {% include email.html %}</span>
         </p>
         <p><span>운영시간 : {{ site.org.hours }}</span></p>
         <p class="copy">{{ site.org.copyright }}</p>

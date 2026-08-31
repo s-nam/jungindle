@@ -52,7 +52,7 @@ permalink: /join/member/
 | 후원 방법 | 계좌이체 (정기 · 일시) |
 | 후원 계좌 | 전화 문의 시 안내해 드립니다 |
 | 기부금영수증 | 발급 가능 (성함 · 주민등록번호 · 연락처 필요) |
-| 문의 | {{ site.org.tel }} / {{ site.org.email }} |
+| 문의 | {{ site.org.tel }} / {% include email.html %} |
 
 ## 투명한 운영
 

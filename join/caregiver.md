@@ -44,7 +44,7 @@ permalink: /join/caregiver/
 ## 지원 방법
 
 1. 전화 문의 — **{{ site.org.tel }}** 또는 {{ site.org.mobile }}
-2. 이메일 접수 — **{{ site.org.email }}** (성함 · 연락처 · 자격증 사본 · 희망 근무지역)
+2. 이메일 접수 — <strong>{% include email.html %}</strong> (성함 · 연락처 · 자격증 사본 · 희망 근무지역)
 3. 방문 접수 — {{ site.org.address }} ({{ site.org.hours }})
 
 ## 준비하실 서류

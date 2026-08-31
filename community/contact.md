@@ -20,7 +20,7 @@ permalink: /community/contact/
   </div>
   <div class="box">
     <h3>이메일 문의</h3>
-    <p><strong>{{ site.org.email }}</strong><br>
+    <p><strong>{% include email.html %}</strong><br>
     24시간 접수 가능하며, 답변은 근무일에 드립니다.</p>
   </div>
   <div class="box">
@@ -50,7 +50,7 @@ permalink: /community/contact/
 서비스 이용 중 불편한 점이나 종사자 관련 고충은 **비공개**로 접수합니다.
 접수된 내용은 담당자 외에 열람할 수 없으며, 접수일로부터 14일 이내에 조치하고 결과를 알려드립니다.
 
-접수: 전화 {{ site.org.tel }} · 이메일 {{ site.org.email }}
+접수: 전화 {{ site.org.tel }} · 이메일 {% include email.html %}
 
 ### 외부 상담 기관
 

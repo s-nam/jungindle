@@ -51,7 +51,7 @@ permalink: /privacy/
 | --- | --- |
 | 보호책임자 | {{ site.org.ceo_title }} {{ site.org.ceo }} |
 | 연락처 | {{ site.org.tel }} |
-| 이메일 | {{ site.org.email }} |
+| 이메일 | {% include email.html %} |
 
 ### 제7조 (개인정보의 안전성 확보조치)
 
