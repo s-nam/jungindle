@@ -10,8 +10,23 @@
   <meta property="og:description" content="{{ page.description | default: site.description }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
 
+  {%- assign gv = site.google_site_verification | default: '' | strip %}
+  {%- if gv != '' %}
+  <meta name="google-site-verification" content="{{ gv }}">
+  {%- endif %}
+  {%- assign nv = site.naver_site_verification | default: '' | strip %}
+  {%- if nv != '' %}
+  <meta name="naver-site-verification" content="{{ nv }}">
+  {%- endif %}
+  {%- assign bv = site.bing_site_verification | default: '' | strip %}
+  {%- if bv != '' %}
+  <meta name="msvalidate.01" content="{{ bv }}">
+  {%- endif %}
+
   <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  {%- include analytics.html %}
 </head>

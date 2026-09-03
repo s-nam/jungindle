@@ -1,0 +1,20 @@
+{%- comment -%}
+  구글 애널리틱스 (GA4 / gtag.js)
+
+  _config.yml 의 google_analytics 에 측정 ID(G-XXXXXXXXXX)를 넣으면 켜집니다.
+  비워두면 스크립트 자체가 출력되지 않습니다.
+
+  로컬 미리보기(bundle exec jekyll serve)에서는 실행되지 않습니다.
+  배포 워크플로만 JEKYLL_ENV=production 으로 빌드하기 때문에,
+  개발 중 새로고침이 실제 방문자 수에 섞이지 않습니다.
+{%- endcomment -%}
+{%- assign ga = site.google_analytics | default: '' | strip -%}
+{%- if ga != '' and jekyll.environment == 'production' %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ ga }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ ga }}');
+</script>
+{%- endif -%}

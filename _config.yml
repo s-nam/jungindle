@@ -50,6 +50,22 @@ org:
   map_embed: ""
   copyright: Copyright 2026 정인들 사회적협동조합 재가복지센터 All Rights Reserved.
 
+# ── 방문자 분석 · 검색엔진 등록 ─────────────────────────────
+# 값을 비워두면 해당 코드가 아예 출력되지 않습니다.
+
+# 구글 애널리틱스 GA4 측정 ID (형식: G-XXXXXXXXXX)
+#   애널리틱스 → 관리 → 데이터 스트림 → 웹 스트림 에서 확인
+#   ※ 로컬 미리보기에서는 동작하지 않습니다 (실제 방문자만 집계)
+google_analytics: "G-0HC8VHM08E"
+
+# 검색엔진 소유확인 토큰 (사이트마다 값이 다릅니다)
+#   구글  : Search Console → 속성 추가 → HTML 태그 → content 값만
+#   네이버: 서치어드바이저 → 사이트 등록 → HTML 태그 → content 값만
+#   빙    : Bing 웹마스터도구 → HTML 메타 태그 → content 값만
+google_site_verification: ""
+naver_site_verification: ""
+bing_site_verification: ""
+
 # ── 관련 사이트 (푸터 셀렉트박스) ───────────────────────────
 family_sites:
   - { name: 노인장기요양보험, url: "https://www.longtermcare.or.kr" }

@@ -90,6 +90,32 @@ email_domain: naver.com
 [`_includes/logo.svg`](_includes/logo.svg) 에 '정人들' 워드마크를 SVG로 그려두었습니다.
 원본 AI/PNG 파일이 있으면 이 파일 대신 이미지를 넣어도 됩니다.
 
+### 방문자 분석 · 검색엔진 등록
+
+[`_config.yml`](_config.yml) 하단에 값만 넣으면 켜집니다. **비워두면 해당 코드가 아예 출력되지 않습니다.**
+
+```yaml
+google_analytics: "G-0HC8VHM08E"   # 적용 중
+google_site_verification: ""       # 구글 Search Console
+naver_site_verification: ""        # 네이버 서치어드바이저
+bing_site_verification: ""         # Bing 웹마스터도구
+```
+
+구글 애널리틱스 스크립트는 [`_includes/analytics.html`](_includes/analytics.html) 에 있고,
+**배포된 사이트에서만 실행**됩니다. 로컬에서 `jekyll serve` 로 미리보기 할 때는 빠지므로
+작업 중 새로고침이 실제 방문자 수에 섞이지 않습니다.
+(배포 워크플로만 `JEKYLL_ENV=production` 으로 빌드하기 때문입니다.)
+
+> 국내 이용자가 대부분이므로 **네이버 서치어드바이저** 등록을 권합니다.
+> searchadvisor.naver.com → 사이트 등록 → 소유확인 HTML 태그의 `content` 값만
+> `naver_site_verification` 에 넣고 배포하면 됩니다. 사이트맵도 함께 제출하세요
+> (`https://jidcoop.com/sitemap.xml` — 자동 생성됩니다).
+
+구글 Search Console 은 애널리틱스가 이미 붙어 있으므로,
+속성 추가 시 **'Google 애널리틱스' 소유확인 방법**을 고르면 태그 없이 바로 확인됩니다.
+
+쿠키 수집에 관한 내용은 [`privacy.md`](privacy.md) 제7조에 명시해 두었습니다.
+
 ### 지도
 
 현재 오시는 길 페이지는 **주소 + '네이버 지도에서 보기' 버튼** 방식입니다. 의도한 설정입니다.
@@ -157,7 +183,7 @@ macOS 기본 Ruby(2.6)는 버전이 낮아 동작하지 않습니다.
 | --- | --- | --- |
 | 글쓰기 화면 | 없음 (파일 편집) | Decap CMS 연결 시 `/admin` 에서 작성 가능 |
 | 온라인 신청 폼 | 없음 | 네이버 폼 · 구글 폼 삽입 |
-| 방문자 통계 | 없음 | 네이버 애널리틱스 · Google Analytics 삽입 |
+| 방문자 통계 | **구글 애널리틱스 적용됨** | 위 2절 '방문자 분석' 참고 |
 
 ## 7. 라이선스
 
